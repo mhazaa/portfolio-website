@@ -1,2 +1,2 @@
 # Portfolio-Website
-Full code for my portfolio website at magdi-hazaa.com
+Full code for my portfolio website at http://magdi-hazaa.com/
