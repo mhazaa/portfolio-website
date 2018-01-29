@@ -1,0 +1,712 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Magdi Hazaa</title>
+<style>
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Kreon:300,400,700');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+	
+	
+	body {
+		background: #0c080f;
+	}
+	
+	html, body {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	img {
+		user-drag: none; 
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	
+	.disableUserSelect {
+		-moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer */
+   	-khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+	}
+	
+	#arrow, #nav, #title  {
+		will-change: opacity;
+		transition: opacity 0.4s;
+		-webkit-transition: opacity 0.4s;
+	}
+	
+	#headerWrap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		background: #ff2c72;
+		overflow: hidden;
+	}
+	
+	#headerWrap #header {	
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		min-width: 1000px;
+		bottom: 0;
+	}
+	
+	#title {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		text-align: center;
+		z-index: 21;
+		opacity: 1;
+	}
+	
+	.hideTitle {
+		z-index: 12 !important;
+		opacity: 0 !important;
+	}
+	
+	#title #logo {
+		position:  relative;
+		text-indent: -99999px;
+		background: url(imgs/logo.png) no-repeat;
+		background-size: cover;
+		width: 33%;
+		min-width: 400px;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		z-index: 5;
+		margin-top: 80px;
+	}
+
+	#title #about {
+		position: relative;
+		width: 70%;
+		left: 15%;
+		margin-top: 40px;
+	}
+	
+	#about #git img {
+		display: inline-block;
+		width: 70px;
+		transition: transform 0.4s;
+		-webkit-transition: -webkit-transform 0.4s;
+	}
+
+	#about #git:hover img {
+		transform: scale(1.1) rotate(360deg);
+		-webkit-transform: scale(1.1) rotate(360deg);
+	}
+
+	#title #about p {
+		color: #981e4d;
+		font-family: 'Kreon', serif;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+		margin-top: 10px;
+	}
+
+	#title #about p span {
+		font-weight: 500;
+	}
+
+	#title #about #socialMedia {
+		display: inline-block;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	#title #about #socialMedia img {
+		float: left;
+		width: 25px;
+		margin-right: 5px;
+		transition: transform 0.4s;
+		-webkit-transition: -webkit-transform 0.4s;
+	}
+
+	#title #about #socialMedia img:hover {
+		transform: scale(1.1) rotate(360deg);
+		-webkit-transform: scale(1.1) rotate(360deg);
+	}
+	
+	#header #arrow {
+		position: fixed;
+		width: 30px;
+		left: 50%;
+		margin-left: -15px;
+		bottom: 5%;
+		cursor: pointer;
+		z-index: 21;
+		opacity: 0.8;
+	}
+
+	#header #arrow:hover {
+		opacity: 1 !important;
+	}
+	
+	#header #frontTrees {
+		will-change: transform;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 14;
+	}
+	
+	#header #frontTrees img {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+	
+	#header #gradient {
+		will-change: transform;
+		position: absolute;
+		background: linear-gradient(#720e5f, #0c080f 80%);
+		/*background: url(imgs/gradient.jpg);
+		background-size: cover;*/
+		width: 100%;
+		height: 101%;
+		left: 0;
+		top: 100%;
+		z-index: 13;
+	}
+	
+	.introAnimation {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+	
+	#header #midTrees {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: 11;
+	}
+	
+	#header #backTrees {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: 10;
+	}
+	
+	#header #glowWrap {
+		position: absolute;
+		width: 100%;
+		left: -10%;
+		z-index: 9;
+	}
+	
+	#glowWrap img {
+		will-change: transform;
+		position: absolute;
+	}
+	
+	#glow1 {
+		width: 42.5%;
+		left: 27%;
+		bottom: 30%;
+		z-index: 7;
+	}
+	
+	#glow2 {
+		width: 49.5%;
+		left: 23.5%;
+		bottom: 25%;
+		z-index: 6;
+	}
+	
+	#glow3 {
+		width: 69%;
+		left: 15%;
+		bottom: 12%;
+		z-index: 4;
+	}
+	
+	#glow4 {
+		width: 82%;
+		left: 8%;
+		bottom: 12%;
+		z-index: 3;
+	}
+	
+	#glow5 {
+		width: 90%;
+		left: 7%;
+		bottom: 12%;
+		z-index: 3;
+	}
+	
+	#main {
+		will-change: transform;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 100%;
+		z-index: 3;
+	}
+	
+	#main, #frontTrees, #gradient {
+		transition: transform 1s cubic-bezier(.07,1.09,1,1.01);
+		-webkit-transition: -webkit-transform 1s cubic-bezier(.07,1.09,1,1.01);
+	}
+		
+	.wrap {
+		background: rgba(0,0,0,0);
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	
+	.wrap .slideContent {
+		position: absolute;
+		width: 40%;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		
+		max-width: 1200px;
+		z-index: 999999;
+	}
+	
+	.wrap .slideContent .artwork {
+		display: block;
+		position: relative;
+	}
+
+	.wrap .slideContent .artwork img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 5px solid white;
+	}
+	
+	.wrap .slideContent .artwork .slideHover {
+		position: absolute;
+		width: calc(100% + 10px);
+		height: 100%;
+		left: 0;
+		bottom: 0;	
+		text-align: center;
+	}
+
+	.wrap .slideContent .artwork p {
+		position: relative;
+		display: inline-block;
+		background: #ffbf31;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		
+		font-size: 32px;
+		font-weight: 700;
+		color: #3e2f0f;
+		font-family: 'Kreon', serif;
+		text-transform: uppercase;
+		z-index: 29;
+		padding: 10px 20px;
+		
+		
+		-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+		transition: clip-path 0.2s;
+		-webkit-transition: -webkit-clip-path 0.2s;
+	}
+
+
+	.wrap .slideContent .artwork:hover p {
+		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0% 100%);
+		clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0% 100%);
+	}
+
+	@-moz-document url-prefix() {
+		.wrap .slideContent .artwork p {
+			opacity: 0;
+			top: 52%;
+			transition: opacity 0.2s, top 0.2s;
+		}
+		.wrap .slideContent .artwork:hover p {
+			top: 48%;
+			opacity: 1;
+			transition: opacity 0.2s, top 0.2s;
+		}
+	}
+
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	   .wrap .slideContent .artwork p {
+			opacity: 0;
+			top: 52%;
+			transition: opacity 0.2s, top 0.2s;
+		}
+		.wrap .slideContent .artwork:hover p {
+			top: 48%;
+			opacity: 1;
+			transition: opacity 0.2s, top 0.2s;
+		}
+	}
+
+	@supports (-ms-ime-align: auto) {
+	  .wrap .slideContent .artwork p {
+			opacity: 0;
+			top: 52%;
+			transition: opacity 0.2s, top 0.2s;
+		}
+		.wrap .slideContent .artwork:hover p {
+			top: 48%;
+			opacity: 1;
+			transition: opacity 0.2s, top 0.2s;
+		}
+	}
+	
+	.wrap .slideContent h1 {
+		font-size: 40px;
+		font-weight: 100;
+		color: white;
+		font-family: 'Kreon', serif;
+		text-transform: uppercase;
+	}
+	
+	.wrap .slideContent .description {
+		width: 70%;
+		color: white;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 10px;
+	}
+	
+	.wrap .slideContent .github {
+		color: #ffbf31;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 10px;
+		
+		position: relative;
+		top: -3px;
+	}
+	
+	#nav {
+		position: fixed;
+		left: 30%;
+		margin-left: -40px;
+		top: 50%;
+		margin-top: -45px;
+		z-index: 99;
+		opacity: 0;
+	}
+	
+	#nav div {
+		width: 20px;
+		height: 3px;
+		background: white;
+		opacity: 0.4;
+		cursor: pointer;
+		margin-bottom: 6px;
+		transition: opacity 0.2s;
+		-webkit-transition: opacity 0.2s;
+	}
+	
+	#nav div:hover {
+		opacity: 0.6 !important;
+		transition: opacity 0.2s;
+		-webkit-transition: opacity 0.2s;
+	}
+
+@media only screen and (max-width: 1000px) {
+	.wrap .slideContent {
+		width: 70%;
+	}
+	
+	#nav {
+		left: 15%;
+	}
+	
+	.wrap .slideContent h1 {
+		font-size: 30px;
+	}
+	
+	.wrap .slideContent .description {
+		width: 100%;
+	}
+}
+	
+	/*media queries*/
+	
+@media only screen and (max-width: 500px) {
+	#title #logo {
+		min-width: 0px;
+		width: 90%;
+	}
+	
+	.wrap .slideContent .artwork p {
+		font-size: 22px;	
+	}
+}
+	
+	/*animation*/
+	
+	.zoomin {
+		-webkit-animation: zoomin 15s infinite;
+		animation: zoomin 15s infinite;
+	}
+	.zoomout {
+		-webkit-animation: zoomout 15s infinite;
+		animation: zoomout 15s infinite;
+	}
+	@-webkit-keyframes zoomin {
+		0% {
+			-webkit-transform: scale(1);
+		}
+		50% {
+			-webkit-transform: scale(1.1);
+		}
+		100% {
+			-webkit-transform: scale(1);
+		}
+	}
+	@keyframes zoomin {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	
+	@-webkit-keyframes zoomout {
+		0% {
+			-webkit-transform: scale(1);
+		}
+		50% {
+			-webkit-transform: scale(0.9);
+		}
+		100% {
+			-webkit-transform: scale(1);
+		}
+	}
+	@keyframes zoomout {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(0.9);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	
+	.rotateSun {
+		-webkit-animation: rotatesun 15s infinite;
+		animation: rotatesun 15s infinite;
+	}
+	
+	@-webkit-keyframes rotatesun {
+		0% {
+			-webkit-transform: rotate(0deg);
+		}
+		50% {
+			-webkit-transform: rotate(180deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+	@keyframes rotatesun {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	
+</style>
+</head>
+
+<body>
+
+<div id="headerWrap">
+	<div id="header">
+		<div id="title">
+			<h1 id="logo">Magdi Hazaa</h1>
+			<div id="about">
+				<a id="git" href="https://github.com/mhazaa" target="_blank"><img src="imgs/git.png"></a>
+				<p>Hi there! I'm Magdi, a front-end web developer and designer currently living in Minneapolis, Minnesota. I work with HTML, CSS, and JavaScript, along with some JS libraries like P5JS and jQuery. I also enjoy writing and digital illustration so I often combine that into my work, using the web as a medium to create story-driven virtual experiences, web apps, or just normal websites. Feel free to contact me at magdialafifi@gmail.com or on social media if you have any questions, requests, or would just like to get in touch.</p>
+				<div id="socialMedia">
+					<a href="https://www.facebook.com/magdi.hazaa" target="_blank"><img src="imgs/facebook.png"></a>
+					<a href="https://twitter.com/magdi_hazaa" target="_blank"><img src="imgs/twitter.png"></a>
+					<a href="https://www.instagram.com/magdi_hazaa/" target="_blank"><img src="imgs/insta.png"></a>
+					<a href="https://vimeo.com/magdihazaa" target="_blank"><img src="imgs/vimeo.png"></a>
+					<a href="https://www.linkedin.com/in/magdi-hazaa-124568141/" target="_blank"><img src="imgs/linkedin.png"></a>
+				</div>	
+			</div>
+		</div>	
+	
+		<img id="arrow" src="imgs/arrow.png">
+		<div id="frontTrees">
+			<img src="imgs/1.png">
+        </div>
+		<div id="gradient"></div>
+		<img id="midTrees" class="zoomin" src="imgs/2.png">
+		<img id="backTrees" class="zoomout" src="imgs/3.png">
+		<div id="glowWrap">
+			<img id="glow1" class="rotateSun" src="imgs/glow1.png">
+			<img id="glow2" class="zoomin" src="imgs/glow2.png">
+			<img id="glow3" class="zoomout" src="imgs/glow3.png">
+			<img id="glow4" class="zoomin" src="imgs/glow4.png">
+			<img id="glow5" class="zoomout" src="imgs/glow5.png">
+		</div>
+	</div>
+</div>
+
+<div id="main">
+	<div class="wrap">
+		<div class="slideContent">	
+			<a class="artwork" href="http://magdi-hazaa.com/the_walk/" target="_blank">
+				<div class="slideHover">
+					<p>Visit website</p>
+				</div>
+               
+                <img src="works/thewalk.jpg">
+			</a>
+			<h1>The Walk - 2016</h1>
+			<p class="description">The Walk is probably my favorite personal project. It's a interactive browser-based virtual enviroenment that tells the story of a kid helping his friend deal with grief. The story is told through text as the two kids explore the woods where one of them used to walk his recently-decesed dog. I started by writing the story and creating the vector-based visuals with Adobe Illustrator, along with some post-processing in Photoshop. For the code, I used HTML/CSS for the responsive layout, and vanilla JavaScript with OO pattern and a gameloop function to control the movement, interactivity, flow, and allowing the user to interact with the website using multiple keys at once (left and right arrows to walk, shift to run, and space to highlight the text.)</p>
+			<a class="github" href="https://github.com/mhazaa/The-Walk" target="_blank">Code at GitHub</a>
+		</div>
+	</div>
+	
+	<div class="wrap">
+		<div class="slideContent">	
+			<a class="artwork" href="http://magdi-hazaa.com/soundbox/" target="_blank">
+				<div class="slideHover">
+					<p>Visit website</p>
+				</div>
+               
+                <img src="works/soundbox.jpg">
+			</a>
+			<h1>SoundBox - 2017</h1>
+			<p class="description">Soundbox is a web app I programmed with JS. It transcribes text into sound either directly from the keyboard, or through three layers of text you can pre-enter and have them all play simultionously. I don't own the sounds, but I also added a functionaility that allows the user to upload their own sounds for each key. Unfortinately, Soundbox doesn't work (at least as expected) in mobile browsers, since they require explicit user input for each audio to play. However, it works on all modern browsers (at least all the ones I tested!) and it's a lot of fun to mess with!</p>
+			<a class="github" href="https://github.com/mhazaa/soundbox" target="_blank">Code at GitHub</a>
+		</div>
+	</div>
+	
+	<div class="wrap">
+		<div class="slideContent">	
+			<a class="artwork" href="http://bright.net.my/" target="_blank">
+               <div class="slideHover">
+					<p>Visit website</p>
+				</div>
+                <img src="works/brightnet.jpg">
+			</a>
+			<h1>Brightnet - 2017</h1>
+			<p class="description">This was a website I recently created for Brightnet; a malaysian tech company that provides business automation, computer hardware, network and security solutions, along with other tech services.</p>
+		</div>
+	</div>
+	
+	<div class="wrap">
+		<div class="slideContent">	
+			<a class="artwork" href="http://noaware.net" target="_blank">
+                <div class="slideHover">
+					<p>Visit website</p>
+				</div>
+                <img src="works/mononoaware.jpg">
+			</a>
+			<h1>Mono no Aware - 2015</h1>
+			<p class="description">Mono No Aware is a web series of brief, digital web comics. It follows one charachter through nine formative moments as he comes of age. It explores themes of human connection and the value of expressing oneself.</p>
+		</div>
+	</div>
+	
+	<div class="wrap">
+		<div class="slideContent">	
+			<a class="artwork" href="https://mhazaa.studio.mcad.edu/work/techTetris/" target="_blank">
+                <div class="slideHover">
+					<p>Visit website</p>
+				</div>
+                <img src="works/techtetris.jpg">
+			</a>
+			<h1>Tech Tetris - 2017</h1>
+			<p class="description">A responsive frontpage design for a made-up company called Tech Tetris. This was mainly made using HTML/CSS3. I also used Adobe Illustrator to design the graphic elements, and CSS3 to animate them a bit.</p>
+			<a class="github" href="https://github.com/mhazaa/Tech-Tetris" target="_blank">Code at GitHub</a>
+		</div>
+	</div>
+</div>
+
+<div id="nav">
+	<div class="navBtn"></div>
+	<div class="navBtn"></div>
+	<div class="navBtn"></div>
+	<div class="navBtn"></div>
+	<div class="navBtn"></div>
+	<div class="navBtn"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
