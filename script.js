@@ -1,5 +1,5 @@
-  var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-  if (isFirefox) {
+	var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+	if (isFirefox) {
 		slowAnimation();
 	}
 
@@ -19,9 +19,9 @@
 		logo = document.getElementById('logo'),
 		glow = document.getElementById('glowWrap'),
 		minWidth = 1000,
-		maxWidth = 1300;
+		maxWidth = 1600;
 		
-		logo.style.height = logo.offsetWidth/6.9444 + 'px';
+		logo.style.height = logo.offsetWidth/6.75675 + 'px';
 		glow.style.height = glow.offsetWidth*1.016 + 'px';
 		glow.style.bottom = -glow.offsetWidth/5 + 'px';
 		
@@ -52,7 +52,7 @@
 		frontTrees: document.getElementById('frontTrees'),
 		gradient: document.getElementById('gradient'),
 		selectedNav: null,
-		NumberofWorks: 5,
+		NumberofWorks: 6,
 		mainTransitionTime: 1000,
 		mainPos: 0,
 
