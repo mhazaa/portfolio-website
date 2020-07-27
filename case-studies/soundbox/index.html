@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164767448-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164767448-1');
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Kreon:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="../../reset.css">
+<link rel="stylesheet" href="../style.css">
+<title>Soundbox</title>
+</head>
+<body>
+
+  <a id="home" href="../../index.html">
+    <img src="../../assets/imgs/home_icon.svg"></img>
+  </a>
+
+  <div id="main">
+    <h1 id="title">Soundbox - 2017</h1>
+    <h2 id="tagline">Music Production Web Application</h2>
+    <div id="codingIcons">
+      <img src='../../assets/imgs/devLogos/html.png'>
+      <img src='../../assets/imgs/devLogos/css3.png'>
+      <img src='../../assets/imgs/devLogos/javascript.png'>
+    </div>
+    <video loop src="assets/videos/soundbox.m4v" controls></video>
+    <a id="visitWebsite" href="http://magdi-hazaa.com/work/soundbox" target="_blank">Visit Website</a>
+    <a id="github" href="https://github.com/mhazaa/soundbox" target="_blank">GitHub</a>
+    <p>
+      Soundbox is a web app I programmed in JavaScript.
+      It transcribes text into sound either directly from the keyboard, or through three layers of text playing simultaneously.
+      I don't own the sounds, but I added the functionality to upload your own audio for each key.<br>
+      Soundbox sadly doesn't work (at least as expected) in mobile browsers, since they require explicit user input for each audio to play. However, it works on all modern browsers.
+    </p>
+    <img src="assets/imgs/1.png"></img>
+    <img src="assets/imgs/2.png"></img>
+    <img src="assets/imgs/3.png"></img>
+    <img src="assets/imgs/4.png"></img>
+    <img src="assets/imgs/5.png"></img>
+    <h3>Ideation & Processs</h3>
+    <p>
+      Soundbox originated in a class centered around the Minneapolis Institute of Art.
+      Initially, it started as a rough recreation of the Museum's floor plans using CSS3 3D features.
+    </p>
+    <img src="assets/imgs/6.png"></img>
+    <img src="assets/imgs/7.png"></img>
+    <img src="assets/imgs/8.png"></img>
+    <img src="assets/imgs/9.png"></img>
+    <p>
+      I later decided to use these geometries to visualize sound and rhythm.
+    </p>
+    <img src="assets/imgs/10.png"></img>
+    <img src="assets/imgs/11.png"></img>
+    <img src="assets/imgs/12.png"></img>
+    <p>
+      Eventually I combined the two approaches.
+      I loaded the didactic description of several specific pieces from the museum's API and used Soundbox to turn those didactics into beats.
+    </p>
+    <img src="assets/imgs/13.png"></img>
+    <img src="assets/imgs/14.png"></img>
+    <img src="assets/imgs/15.png"></img>
+    <p>
+      While I still have the MIA version of the project, I decided in the end that I wanted to maintain the versatility of Soundbox by keeping it as an open-ended web application with no preloaded texts.
+    </p>
+  </div>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>

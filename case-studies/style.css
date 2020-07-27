@@ -1,0 +1,147 @@
+html, body {
+  background: #25051f;
+  width: 100%;
+}
+
+#home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+}
+#home:hover {
+  opacity: 1;
+}
+#home img {
+  width: 100%;
+  height: auto;
+}
+#main {
+  position: relative;
+  width: 100%;
+	font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+}
+.fadein {
+  opacity: 1 !important;
+}
+#main #title {
+	display: table;
+  margin: 10px auto 10px auto;
+	background: #fc1669;
+	padding: 0.2em 0.4em;
+	font-size: 2.2em;
+	font-weight: 100;
+	color: white;
+	font-family: 'Kreon', serif;
+	letter-spacing: -2px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+#main #tagline {
+  display: table;
+  margin: 0 auto 10px auto;
+	color: white;
+	font-size: 1em;
+	font-family: 'Kreon', serif;
+	font-weight: 300;
+}
+#main #codingIcons {
+	display: inline-block;
+  margin: 0 auto 20px auto;
+	height: 20px;
+}
+#main #codingIcons img {
+	display: inline-block;
+	height: 100%;
+	margin-right: 2px;
+	opacity: 0.7;
+}
+#visitWebsite, #github {
+	display: inline-block;
+  margin: 0 auto 20px auto;
+  padding: 0.3em 0.6em;
+  font-size: 1.6em;
+  background: #fc1669;
+	color: white;
+	font-family: 'Kreon', serif;
+	text-decoration: none;
+	text-align: right;
+	cursor: pointer;
+  transition: padding 0.4s;
+  -webkit-transition: padding 0.4s;
+}
+#visitWebsite:hover, #github:hover {
+  padding: 0.3em 1em;
+}
+#main h3 {
+  background: #fc1669;
+  display: table;
+  margin: 0 auto 20px auto;
+  padding: 0.3em 0.6em;
+	color: white;
+	font-size: 1.3em;
+	font-family: 'Kreon', serif;
+}
+#main p {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 700px;
+  color: white;
+	font-family: 'Kreon', serif;
+  font-size: 0.8em;
+	line-height: 1.1em;
+  font-weight: 200;
+	opacity: 0.7;
+}
+#main video, #main>img {
+	display: table;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 700px;
+}
+.fullwidth {
+  max-width: none !important;
+}
+.halfwidth {
+  float: left;
+  width: 50% !important;
+  max-width: none !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .fullwidth {
+    max-width: none !important;
+  }
+  .halfwidth {
+    float: none !important;
+    width: 100% !important;
+  }
+}
+
+/* trackbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
