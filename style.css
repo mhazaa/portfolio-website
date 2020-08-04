@@ -59,10 +59,7 @@ canvas {
 	display: inline-block;
 	position: relative;
 	margin-right: 2px;
-	height: 30px;
-}
-#about #codingIcons img:nth-of-type(5), #about #codingIcons img:nth-of-type(6) {
-	height: 25px%;
+	height: 20px;
 }
 #about #resume {
 	display: inline-block;
