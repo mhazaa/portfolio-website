@@ -19,6 +19,7 @@ var headerImgsLoaded = [];
 var portfolioImgs = [
   loadImg('case-studies/cosmicchat/assets/poster.jpg'),
   loadImg('case-studies/tinyearth/assets/poster.jpg'),
+  loadImg('case-studies/anxietycatalogue/assets/poster.jpg'),
   loadImg('case-studies/brightnet/assets/poster.jpg'),
   loadImg('case-studies/perennial/assets/poster.jpg'),
   loadImg('case-studies/soundbox/assets/poster.jpg'),
