@@ -17,14 +17,14 @@ var headerImgs = [
 var headerImgsLoaded = [];
 
 var portfolioImgs = [
-  loadImg('case-studies/cosmicchat/assets/poster.jpg'),
+  loadImg('case-studies/cosmic-chat/assets/poster.jpg'),
   loadImg('case-studies/tinyearth/assets/poster.jpg'),
-  loadImg('case-studies/anxietycatalogue/assets/poster.jpg'),
+  loadImg('case-studies/anxiety-catalogue/assets/poster.jpg'),
   loadImg('case-studies/brightnet/assets/poster.jpg'),
   loadImg('case-studies/perennial/assets/poster.jpg'),
   loadImg('case-studies/soundbox/assets/poster.jpg'),
   loadImg('case-studies/sonata/assets/poster.jpg'),
-  loadImg('case-studies/forrestenchanter/assets/poster.jpg')
+  loadImg('case-studies/forest-enchanter/assets/poster.jpg')
 ]
 
 var hammer = new Hammer(document.body);
