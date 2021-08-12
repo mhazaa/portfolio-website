@@ -236,12 +236,13 @@ canvas {
 .slide .title {
 	background: #fc1669;
 	position: absolute;
-	display: none;
+	display: block;
 	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
+	transform: translateY(-60%);
+	-webkit-transform: translateY(-60%);
 	padding: 0.3em 0.3em 0.3em 1.2em;
 	z-index: 99;
+	opacity: 0;
 	/*width: 0;
 	white-space: nowrap;
 	overflow: hidden;*/
@@ -255,6 +256,13 @@ canvas {
 	text-transform: uppercase;
 	/*transition: width 0.4s ease;
   -webkit-transition: width 0.4s ease;*/
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+}
+.showTitle {
+	opacity: 1 !important;
+	transform: translateY(-50%) !important;
+	-webkit-transform: translateY(-50%) !important;
 }
 
 .slide .poster {
