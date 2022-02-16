@@ -46,7 +46,7 @@ canvas {
 	width: 60%;
 	text-align: center;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 #about p span {
 	font-weight: 800;
@@ -62,7 +62,7 @@ canvas {
 #about #codingIcons img {
 	display: inline-block;
 	position: relative;
-	margin: 20px 10px 0 0;
+	margin: 10px 10px 0 0;
 	height: 40px;
 }
 #about #codingIcons .smallIcon {
@@ -315,7 +315,6 @@ canvas {
 
 	#about p {
 		width: 100%;
-		margin-top: 10px;
 	}
 
 	#about #codingIcons img {
