@@ -10,9 +10,10 @@ canvas {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);f
+	transform: translateX(-50%);
 	z-index: 0;
 }
+
 #mainCanvas {
 	background: #ff2c72;
 }
@@ -32,8 +33,8 @@ canvas {
 	transition: opacity 0.4s;
 	-webkit-transition: opacity 0.4s;
 }
-#about #myPic {
-	width: 25%;
+#about #profile_photo {
+	width: 22%;
 	min-width: 200px;
 	border-radius: 999px;
 }
@@ -45,20 +46,26 @@ canvas {
 	width: 60%;
 	text-align: center;
 	margin: auto;
+	margin-top: 20px;
 }
 #about p span {
 	font-weight: 800;
 }
 #about #codingIcons {
-	display: block;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+    justify-content: center;
 	position: relative;
-	margin-top: 10px;
 	opacity: 1;
 }
 #about #codingIcons img {
 	display: inline-block;
 	position: relative;
-	margin-right: 2px;
+	margin: 20px 10px 0 0;
+	height: 40px;
+}
+#about #codingIcons .smallIcon {
 	height: 20px;
 }
 #about #resume {
@@ -302,8 +309,22 @@ canvas {
 		padding-top: 0 !important;
 	}
 
+	#about {
+		padding: 0 10px;
+	}
+
 	#about p {
-		width: 97%;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	#about #codingIcons img {
+		margin: 10px 5px 0 0;
+		height: 30px;
+	}
+
+	#about #codingIcons .smallIcon {
+		height: 15px;
 	}
 }
 
