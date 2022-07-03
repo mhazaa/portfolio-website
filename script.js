@@ -23,7 +23,6 @@ const portfolioImgs = [
   loadImg('case-studies/3dportfolio/assets/poster.jpg'),
   loadImg('case-studies/tinyearth/assets/poster.jpg'),
   loadImg('case-studies/anxiety-catalogue/assets/poster.jpg'),
-  loadImg('case-studies/brightnet/assets/poster.jpg'),
   loadImg('case-studies/perennial/assets/poster.jpg'),
   loadImg('case-studies/soundbox/assets/poster.jpg'),
   loadImg('case-studies/sonata/assets/poster.jpg'),
