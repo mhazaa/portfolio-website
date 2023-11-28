@@ -1,5 +1,5 @@
 # Portfolio Website
 
-http://magdi-hazaa.com
+https://magdihazaa.com
 
 My portfolio website
