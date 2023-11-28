@@ -20,7 +20,8 @@ const headerImgsLoaded = [];
 const portfolioImgs = [
   loadImg('case-studies/shapeshifter/assets/poster.jpg'),
   loadImg('case-studies/cosmic-chat/assets/poster.jpg'),
-  loadImg('case-studies/3dportfolio/assets/poster.jpg'),
+  loadImg('case-studies/sample-3d-portfolio/assets/poster.jpg'),
+  loadImg('case-studies/al-gamal/assets/poster.jpg'),
   loadImg('case-studies/tinyearth/assets/poster.jpg'),
   loadImg('case-studies/anxiety-catalogue/assets/poster.jpg'),
   loadImg('case-studies/perennial/assets/poster.jpg'),

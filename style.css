@@ -3,7 +3,7 @@ html, body {
 	background: #ff2c72;
 	width: 100%;
 	height: 100%;
-  overflow: hidden;
+	overflow: hidden;
 }
 
 canvas {
@@ -47,6 +47,9 @@ canvas {
 	text-align: center;
 	margin: auto;
 	margin-top: 10px;
+}
+#about a {
+	color: #720e5f;
 }
 #about p span {
 	font-weight: 800;
@@ -97,7 +100,6 @@ canvas {
 	position: absolute;
 	display: block;
 	width: 100%;
-	height: 100%;
 	z-index: 2;
 	text-align: center;
 	font-size: 20px;
@@ -225,15 +227,15 @@ canvas {
 	display: block;
 	position: absolute;
 	width: 100%;
-  height: 100%;
+  	height: 100%;
 }
 
 .slide {
 	will-change: opacity;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  	display: block;
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
 	font-size: 20px;
 	z-index: 0;
 }
@@ -262,7 +264,7 @@ canvas {
 	font-weight: 500;
 	text-transform: uppercase;
 	/*transition: width 0.4s ease;
-  -webkit-transition: width 0.4s ease;*/
+  	-webkit-transition: width 0.4s ease;*/
 	transition: transform 0.4s, opacity 0.4s;
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 }
@@ -277,9 +279,9 @@ canvas {
 	position: relative;
 	width: 70%;
 	margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  	top: 50%;
+  	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 	z-index: 1;
 	cursor: pointer;
 }
@@ -337,17 +339,17 @@ canvas {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+	width: 5px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+	background: #f1f1f1;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey;
+	background: grey;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	background: #555;
 }
