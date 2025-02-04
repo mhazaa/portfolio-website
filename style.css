@@ -250,7 +250,7 @@ canvas {
 	top: 50%;
 	transform: translateY(-60%);
 	-webkit-transform: translateY(-60%);
-	padding: 0.3em 0.3em 0.3em 1.2em;
+	padding: 0.3em 0.4em 0.3em 1.2em;
 	z-index: 99;
 	opacity: 0;
 	/*width: 0;
